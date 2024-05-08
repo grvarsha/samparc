@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Hello world!<h1>
+<table>
+<tr><th>Name</th><th>Score</th></tr>
+{% for cart in scores %}
+<tr>
+<td>{{ cart.name }}</td>
+<td>{{ cart.value }}</td>
+</tr>
+
+{% endfor %}
+</table>
+<a href="{% url 'about' %}">About page</a>
+{% endblock %}
